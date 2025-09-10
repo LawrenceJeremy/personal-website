@@ -13,7 +13,7 @@ export default function Layout() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-black transition-colors">
+    <div className="min-h-screen flex flex-col dark:bg-black transition-colors">
       {/* Header */}
       <header className="w-full">
         <div className="max-w-4xl mx-auto p-4 font-sans">
@@ -30,6 +30,7 @@ export default function Layout() {
                 onCheckedChange={(checked) =>
                   setTheme(checked ? "dark" : "light")
                 }
+                className="dark:bg-white"
               />
               <Moon className="h-4 w-4 text-gray-600 dark:text-white" />
             </div>
@@ -85,7 +86,7 @@ export default function Layout() {
       {/* Footer (Always at Bottom) */}
       <footer className="w-full">
         <div className="max-w-4xl mx-auto p-4 text-center text-gray-600 dark:text-white text-sm">
-          © {new Date().getFullYear()} MyWebsite. All rights reserved.
+          © {new Date().getFullYear()} Jeremy Poliquit. All rights reserved.
         </div>
       </footer>
     </div>
